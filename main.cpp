@@ -3,7 +3,7 @@
 
 const int MAXN = 20; //the maximum number of cities possible (with such complexity N > 20 would take up too much time to calculate, so N = 20 is max)
 const int INF = 1e9; //the infinity - the number much larger than any maximum
-int n;
+int n;//the actual number of cities
 
 int dist[MAXN][MAXN];//the distances between the cities
 
