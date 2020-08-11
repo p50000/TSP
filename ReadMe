@@ -1,0 +1,7 @@
+The following solution is based on such an idea:
+let us have a function min(mask, c), where mask is the set of cities we've visited and c is the city we visited the last.
+The set is a binary mask(for example 1001), where zero means that we haven't visited the city yet and one means that we have.
+For all possible states of mask and c we calculate the shortest distance using dynamic programming:
+If we want to go from c to some city c2 we haven't visited yet, from (mask, c) we go to (mask | c2,, c2), and the answer is
+ (mask | c2, c2) = (mask, c1) + dist(c1, c2)
+The overall complexicy of the algorithm is (2^n * n^2), since we make 2^n iterations to get all posible masks and also n^2 iterations to determine c and c2 for such masks.
